@@ -2,9 +2,9 @@ function updateReport
 % UPDATEREPORT - This function builds the data reporting string which will
 % eventually get sent to slack
 
-    load("C://IREC-2026-Systems/Design Reporting/reportData1.mat");
-    load("C://IREC-2026-Systems/Design Reporting/reportData2.mat");
-    load("C://IREC-2026-Systems/Design Reporting/reportData3.mat");
+    load("C://IREC-2027-Analysis/Design Reporting/reportData1.mat");
+    load("C://IREC-2027-Analysis/Design Reporting/reportData2.mat");
+    load("C://IREC-2027-Analysis/Design Reporting/reportData3.mat");
     L = reportData3.length;
     D = reportData3.diameter;
     
@@ -98,7 +98,7 @@ function updateReport
     
     % Write the report
     outStr = str1 + newline + newline + str2 + newline + newline + str3;
-    f_ID = fopen("C://IREC-2026-Systems/Design Reporting/Report.txt", "w");
+    f_ID = fopen("C://IREC-2027-Analysis/Design Reporting/Report.txt", "w");
     fprintf(f_ID, outStr);
     fclose(f_ID);
 
@@ -108,7 +108,7 @@ function updateReport
     else
         emojiStr = ":him2:";
     end
-    f_ID = fopen("C://IREC-2026-Systems/Design Reporting/emoji.txt", "w");
+    f_ID = fopen("C://IREC-2027-Analysis/Design Reporting/emoji.txt", "w");
     fprintf(f_ID, emojiStr);
     fclose(f_ID);
 end

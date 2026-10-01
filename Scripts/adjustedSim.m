@@ -11,14 +11,14 @@ overrideAviMass = [0 1.66];
 overridePayloadMass = [0 0];
 
 %% Auto inputs
-load("C://IREC-Analysis-2027/Design Reporting/reportData1.mat");
-load("C://IREC-Analysis-2027/Design Reporting/reportData2.mat");
-load("C://IREC-Analysis-2027/Design Reporting/reportData3.mat");
+load("C:\IREC-2027-Analysis\Design Reporting\reportData1.mat");
+load("C:\IREC-2027-Analysis\Design Reporting\reportData2.mat");
+load("C:\IREC-2027-Analysis\Design Reporting\reportData3.mat");
 alt_var = 0.5*reportData1.control-reportData1.uncertainty;
 alt_target = 3048 + reportData1.ind_error + 0.5*reportData1.control;
 %% Setup
 % Retrieve openrocket
-filepath = "C:\IREC-Analysis-2027\Rocket Files\RISK.ork";
+filepath = "C:\IREC-2027-Analysis\Rocket Files\RISK.ork";
 risk = openrocket(filepath);
 rocket = risk.rocket();
 % Reference simulation
@@ -34,10 +34,10 @@ site = launchsites("spaceport-midland");
 % Launch time
 lTime.date = [2025, 06, 21]; % [year, month, day]
 lTime.time = [10, 21, 00]; % [hour, minute, second]
-airDataFilePath = "C:\IREC-Analysis-2027\atmosphereData\airdata.mat";
+airDataFilePath = "C:\IREC-2027-Analysis\atmosphereData\airdata.mat";
 
 % Rasaero drag curve
-dragFilePath = "C:\IREC-Analysis-2027\Data\CDplot-RISK-allTurbulent.csv";
+dragFilePath = "C:\IREC-2027-Analysis\Data\CDplot-RISK-allTurbulent.csv";
 
 %% Get atmosphere
 airdata = importdata(airDataFilePath);
@@ -138,7 +138,7 @@ reportData1.apogee_indicated = mAltInd;
 reportData1.target = alt_target;
 reportData1.error = targetErr;
 reportData1.ind_error = errAlt;
-save("C://IREC-Analysis-2027/Design Reporting/reportData1.mat", "reportData1")
+save("C://IREC-2027-Analysis/Design Reporting/reportData1.mat", "reportData1")
 
 reportData2.maxSpeed = maxVel;
 reportData2.rodSpeed = rodVel;
@@ -151,7 +151,7 @@ reportData2.flutterMargin = flutterFOS;
 reportData2.q = max_q(2);
 reportData2.qVel = max_q_vel;
 reportData2.qTime = max_q(1);
-save("C://IREC-Analysis-2027/Design Reporting/reportData2.mat", "reportData2")
+save("C://IREC-2027-Analysis/Design Reporting/reportData2.mat", "reportData2")
 
 % get subsystem masses
 AB = risk.component(name="Airbrake");
@@ -191,7 +191,7 @@ reportData3.mainCD = mainCD;
 reportData3.drogueDiameter = drogueD;
 reportData3.drogueArea = drogueA;
 reportData3.drogueCD = drogueCD;
-save("C://IREC-Analysis-2027/Design Reporting/reportData3.mat", "reportData3")
+save("C://IREC-2027-Analysis/Design Reporting/reportData3.mat", "reportData3")
 
 updateReport;
 
