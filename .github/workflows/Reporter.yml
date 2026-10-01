@@ -1,0 +1,43 @@
+name: Send analysis report to channel
+on:
+  push:
+    branches:
+      - main
+jobs:
+  run:
+    name: Send report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v6
+      - name: Set variables
+        run: |
+          EMOJI=$(cat '${{ env.GITHUB_WORKSPACE }}Design Reporting/emoji.txt')
+          REPORT=$(cat '${{ env.GITHUB_WORKSPACE }}Design Reporting/Report.txt' | sed ':a;N;$!ba;s/\n/\\n/g' )
+          DATETIME=$(TZ='America/New_York' date)
+          echo "EMOJI=$EMOJI" >> $GITHUB_ENV
+          echo "REPORT=$REPORT" >> $GITHUB_ENV
+          echo "DATETIME=$DATETIME" >> $GITHUB_ENV
+
+      - name: Post first message with report date
+        id: send_report
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACKBOT_TOKEN }}
+          payload: |
+            icon_emoji: "${{env.EMOJI}}"
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            text: "*${{ env.DATETIME }}*"
+
+      - name: Post full report to thread
+        id: send_full_report
+        uses: slackapi/slack-github-action@v2.1.1
+        with:
+          method: chat.postMessage
+          token: ${{ secrets.SLACKBOT_TOKEN }}
+          payload: |
+            channel: ${{ secrets.SLACK_CHANNEL_ID }}
+            thread_ts: ${{ steps.send_report.outputs.ts}}
+            text: "```${{ env.REPORT }}```"
+

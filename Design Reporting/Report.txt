@@ -1,0 +1,67 @@
+1---APOGEE STATS
+Apogee
+     Status ------------------: ON TARGET
+     Geometric apogee [m, ft] : 3390.4, 11123
+     Target [m, ft] 
+          Center -------------: 3421.1, 11224
+          Range --------------: 120.8, 396
+          Lower bound --------: 3360.7, 11026
+          Upper bound --------: 3481.5, 11422
+     Apogee error [m, ft, %] -: -30.7, -101, -25%
+     Indicated apogee [m, ft] : 3212.9, 10541
+     Uncertainty [m, ft] -----: 134.6, 442
+     Control authority [m, ft]: 390.0, 1280
+
+2---PERFORMANCE
+Motion
+     Maximum speed [m/s] -----: 319.5
+     Rod exit speed [m/s] ----: 32.3
+     Max. accel. [m/s^2, g] --: 155.7, 15.9
+     Flight time [s] ---------: 219
+Recovery
+     Drogue descent rate [m/s]: 23.12
+     Drogue time [s] ---------: 124
+     Main descent rate [m/s] -: 6.17
+     Main time [s] -----------: 70
+     Ground hit speed [m/s] --: 6.13
+     Max. snatch force [N] ---: 2980
+Stability
+     Rod exit [%, cal] -------: 8.70%, 1.66
+     Burnout [%, cal] --------: 21.85%, 4.16
+Flutter
+     Flutter speed [m/s] -----: 493.2
+     Flutter margin ----------: 1.54
+Other
+     Max q [kPa] -------------: 52.67
+     Speed at max q [m/s] ----: 174.3
+     time at max q [s] -------: 1.26
+
+3---DESIGN
+Dimensions
+     Length [in] -------------: 118
+     Diameter [in] -----------: 6.20
+     Reference area [m^2] ----: 0.0195
+Rocket Mass [kg]
+     Fully loaded ------------: 27.85
+     No motor ----------------: 20.26
+     Burnout -----------------: 23.39
+     Empty -------------------: 13.70
+     Target ------------------: 27.72
+     Error -------------------: 0.13
+System Masses [kg]
+     Airbrakes ---------------: 1.237
+     Avionics ----------------: 2.366
+     Payload -----------------: 2.958
+Recovery
+     Main
+          Diameter [in] ------: 96
+          Area [m^2] ---------: 2.4384
+          Cd -----------------: 2.20
+          Charge sizes [g] ---: 4.54, 6.81
+          4-40 pins ----------: 5
+     Drogue
+          Diameter [in] ------: 36
+          Area [m^2] ---------: 0.6567
+          Cd -----------------: 1.35
+          Charge sizes [g] ---: 1.55, 2.32
+          4-40 pins ----------: 5
