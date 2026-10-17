@@ -18,7 +18,7 @@ alt_var = 0.5*reportData1.control-reportData1.uncertainty;
 alt_target = 3048 + reportData1.ind_error + 0.5*reportData1.control;
 %% Setup
 % Retrieve openrocket
-filepath = "C:\IREC-2027-Analysis\Rocket Files\RISK.ork";
+filepath = "C:\IREC-2027-Analysis\Rocket Files\IREC-2027.ork";
 risk = openrocket(filepath);
 rocket = risk.rocket();
 % Reference simulation
