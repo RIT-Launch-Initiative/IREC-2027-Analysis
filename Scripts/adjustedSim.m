@@ -22,7 +22,7 @@ filepath = "C:\IREC-2027-Analysis\Rocket Files\IREC-2027.ork";
 risk = openrocket(filepath);
 rocket = risk.rocket();
 % Reference simulation
-sim = risk.sims("15mph-Midland");
+sim = risk.sims("15mph-Midland-M6");
 % rocket parameters
 L = rocket.getLength();
 [D, ~] = risk.refdims();
