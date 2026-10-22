@@ -154,7 +154,7 @@ reportData2.qTime = max_q(1);
 save("C://IREC-2027-Analysis/Design Reporting/reportData2.mat", "reportData2")
 
 % get subsystem masses
-AB = risk.component(name="Airbrake");
+AB = risk.component(name="AeroBrakes");
 avi = risk.component(name="Avionics");
 payload = risk.component(name="Payload");
 ABMass = AB.getMass;
