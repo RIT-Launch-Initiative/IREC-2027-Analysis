@@ -3,11 +3,11 @@ Apogee
      Status ------------------: ON TARGET
      Geometric apogee [m, ft] : 3460.2, 11352
      Target [m, ft] 
-          Center -------------: 3422.7, 11229
+          Center -------------: 3423.7, 11233
           Range --------------: 120.8, 396
-          Lower bound --------: 3362.3, 11031
-          Upper bound --------: 3483.1, 11428
-     Apogee error [m, ft, %] -: 37.4, 123, 31%
+          Lower bound --------: 3363.3, 11035
+          Upper bound --------: 3484.1, 11431
+     Apogee error [m, ft, %] -: 36.4, 120, 30%
      Indicated apogee [m, ft] : 3280.4, 10763
      Uncertainty [m, ft] -----: 134.6, 442
      Control authority [m, ft]: 390.0, 1280

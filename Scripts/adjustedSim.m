@@ -18,7 +18,7 @@ alt_var = 0.5*reportData1.control-reportData1.uncertainty;
 alt_target = 3048 + reportData1.ind_error + 0.5*reportData1.control;
 %% Setup
 % Retrieve openrocket
-filepath = "C:\IREC-2027-Analysis\Rocket Files\IREC-2027.ork";
+filepath = "C:\IREC-2027-Analysis\Rocket Files\BIRD.ork";
 risk = openrocket(filepath);
 rocket = risk.rocket();
 % Reference simulation
@@ -37,7 +37,7 @@ lTime.time = [10, 21, 00]; % [hour, minute, second]
 airDataFilePath = "C:\IREC-2027-Analysis\atmosphereData\airdata.mat";
 
 % Rasaero drag curve
-dragFilePath = "C:\IREC-2027-Analysis\Data\CDplot-RISK-allTurbulent.csv";
+dragFilePath = "C:\IREC-2027-Analysis\Data\CDplot-RISK-allTurbulent.CSV";
 
 %% Get atmosphere
 airdata = importdata(airDataFilePath);
