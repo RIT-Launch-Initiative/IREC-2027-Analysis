@@ -15,7 +15,7 @@ load("C:\IREC-2027-Analysis\Design Reporting\reportData1.mat");
 load("C:\IREC-2027-Analysis\Design Reporting\reportData2.mat");
 load("C:\IREC-2027-Analysis\Design Reporting\reportData3.mat");
 alt_var = 0.5*reportData1.control-reportData1.uncertainty;
-alt_target = 3289;
+alt_target = 3048 + reportData1.ind_error + 0.5*reportData1.control;
 %% Setup
 % Retrieve openrocket
 filepath = "C:\IREC-2027-Analysis\Rocket Files\BIRD.ork";

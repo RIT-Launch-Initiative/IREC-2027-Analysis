@@ -1,13 +1,13 @@
 1---APOGEE STATS
 Apogee
-     Status ------------------: OVERSHOOT
+     Status ------------------: ON TARGET
      Geometric apogee [m, ft] : 3360.5, 11025
      Target [m, ft] 
-          Center -------------: 3289.0, 10791
+          Center -------------: 3419.4, 11219
           Range --------------: 120.8, 396
-          Lower bound --------: 3228.6, 10593
-          Upper bound --------: 3349.4, 10989
-     Apogee error [m, ft, %] -: 71.5, 235, 59%
+          Lower bound --------: 3359.0, 11020
+          Upper bound --------: 3479.9, 11417
+     Apogee error [m, ft, %] -: -59.0, -193, -49%
      Indicated apogee [m, ft] : 3184.0, 10446
      Uncertainty [m, ft] -----: 134.6, 442
      Control authority [m, ft]: 390.0, 1280
