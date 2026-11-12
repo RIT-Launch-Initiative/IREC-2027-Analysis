@@ -15,7 +15,7 @@ load("C:\IREC-2027-Analysis\Design Reporting\reportData1.mat");
 load("C:\IREC-2027-Analysis\Design Reporting\reportData2.mat");
 load("C:\IREC-2027-Analysis\Design Reporting\reportData3.mat");
 alt_var = 0.5*reportData1.control-reportData1.uncertainty;
-alt_target = 3048 + reportData1.ind_error + 0.5*reportData1.control;
+alt_target = 3289;
 %% Setup
 % Retrieve openrocket
 filepath = "C:\IREC-2027-Analysis\Rocket Files\BIRD.ork";
@@ -101,7 +101,7 @@ stabRod = stabData.("Stability percent")(2);
 stabRodCal = stabData.("Stability margin")(2);
 stabMax = max(simData.("Stability percent"));
 stabMaxCal = max(simData.("Stability margin"));
-% Flutter
+% % Flutter
 fins = risk.component(class="FinSet");
 flutterFOS = FOS_finflutter(simData, fins);
 % Dynamic pressure
@@ -146,8 +146,8 @@ reportData2.maxAccel = maxAccel;
 reportData2.flightTime = seconds(times(end));
 reportData2.rodStab = stabRod;
 reportData2.maxStab = stabMax;
-reportData2.flutterSpeed = flutterFOS*maxVel;
-reportData2.flutterMargin = flutterFOS;
+%reportData2.flutterSpeed = flutterFOS*maxVel;
+%reportData2.flutterMargin = flutterFOS;
 reportData2.q = max_q(2);
 reportData2.qVel = max_q_vel;
 reportData2.qTime = max_q(1);
